@@ -1,0 +1,3 @@
+[submodule "Awa's"]
+    path = sherena/.gitmodules
+    url = https://github.com/SherenaKaguer/sherena.git

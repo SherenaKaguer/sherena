@@ -1,0 +1,120 @@
+<!-- Cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shop.css">
+    <title>Shopping Cart - Awa's Beauty Butterfly</title>
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="logo/IMG-20240628-WA0005.jpg" class="Logo" alt="Logo"></a>
+        <div>
+            <form class="search-bar">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+            </form>
+        </div>
+        <div class="container">
+            <ul id="navbar">
+                <li id="navbar-list">
+                    <a href="shop.html">Acceuil</a>
+                </li>
+                <li id="navbar-list">
+                    <a href="Products.html">Nos Produits</a>
+                </li>
+                <li id="navbar-list">
+                    <a href="Contact.html">Contactez Nous</a>
+                </li>
+                <li id="navbar-list" class="lg-bag">
+                    <a href="Cart.html" class="active"><i class="fas fa-shopping-cart"></i>Cart</a>
+                </li>
+                <a href="#" id="close"><i class="fas fa-times"></i></a>
+            </ul>
+           
+        </div>
+        <div id="mobile">
+            <a href="Cart.html" class="active"><i class="fas fa-shopping-cart"></i>Cart</a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="cart" class="section-p1">
+        <h1>Shopping Cart</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Inside <tbody id="cart-items"> -->
+                <tr>
+                    <td>Product Name</td>
+                    <td>Product Price</td>
+                    <td>Quantity</td>
+                    <td>Total</td>
+                    <td><button class="remove-item" data-id="productId">Remove</button></td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div class="cart-summary">
+            <h2>Cart Summary</h2>
+            <div class="summary-details">
+                <p>Total Items: <span id="total-items">0</span></p>
+                <p>Total Price: XOF<span id="total-price">0.00</span></p>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <a href="#"><img src="logo/IMG-20240628-WA0005.jpg" class="logo" alt="Logo"></a>
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> CICES Cite Magistrat</p>
+            <p><strong>Mobile: </strong>77- - - -</p>
+            <p><strong>Hours: </strong>10:00-18:00, Mon-Sat</p>
+            <div class="follow">
+                <h4>Suivez Nous</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-instagram-square"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Shipping Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">Wishlist</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; Awa's Beauty Butterfly. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="Main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

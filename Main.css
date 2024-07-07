@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    width: 100%;
+}
+
+:root {
+    --hoockers-green_20: hsl(148, 20%, 38%, 0.2);
+    --pale-spring-bud: hsl(60, 68%, 85%);
+    --hoockers-green: hsl(148, 20%, 38%);
+    --spanish-gray: hsl(0, 0%, 61%);
+    --light-gray: hsl(0, 0%, 80%);
+    --cultured-1: hsl(0, 0%, 97%);
+    --cultured-2: hsl(60, 6%, 93%);
+    --gray-web: hsl(0, 0%, 49%);
+    --white_30: hsl(0, 0%, 100%, 0.3);
+    --black_70: hsla(0, 0%, 0%, 0.7);
+    --black_50: hsla(0, 0%, 0%, 0.5);
+    --black_15: hsla(0, 0%, 0%, 0.15);
+    --black_10: hsla(0, 0%, 0%, 0.1);
+    --black_5: hsla(0, 0%, 0%, 0.05);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --gradient: linear-gradient(to right, transparent 50%, var(--white_30) 100%);
+    --ff-urbanist: 'Urbanist', sans-serif;
+    --fs-1: 4.8rem;
+    --fs-2: 4rem;
+    --fs-3: 3.4rem;
+    --fs-4: 2.4rem;
+    --fs-5: 2rem;
+    --fs-6: 1.8rem;
+    --fs-7: 1.5rem;
+    --fs-8: 1.4rem;
+    --fs-9: 1.3rem;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+    --section-padding: 35px;
+    --shadow-1: 0 0.7px 1.6px var(--black_10), 0 2.1px 5px var(--black_10), 0 10px 24px var(--black_10);
+}
+
+.section {
+    padding: var(--section-padding);
+}
+
+.containers { padding-inline: 15px; }
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;   
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: linear-gradient(135deg, #c2bdc1, #DAA520); 
+    box-shadow: var(--shadow-1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#header .Logo {
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: #E3E6F3;
+    height: auto;
+    margin-left:0;
+}
+
+#header .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+#header .search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#header .search-bar button {
+    padding: 10px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#header .search-bar {
+    order: -1;
+    margin-right: auto;
+}
+
+#header .search-bar .btn {
+    background-color: #daa520af; 
+    border-color: #daa520ad;
+}
+
+#header .search-bar .btn:hover {
+    background-color: #B8860B; 
+    border-color: #B8860B;
+}
+
+#navbar {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+#navbar li {
+    list-style-type: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding:10px 20px;
+    color: #f1eaea;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover, #navbar li a.active {
+    color: #48463fb9;
+}
+
+#navbar li a.active::after, #navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #DAA520;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    position: relative;
+    background-color: #f5f5f5;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero .has-scrollbar {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.hero .scrollbar-item {
+    scroll-snap-align: center;
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .hero-card {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .hero-card .card-content {
+    text-align: center;
+    color: #fff;
+}
+
+.hero .hero-card .hero-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero .hero-card .hero-text {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.hero .hero-card .price {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.hero .hero-card .btn {
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#product1 {
+    text-align: center;
+}
+
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.pro img {
+    border: 1px solid rgba(128, 0, 128, 0.059);
+}
+
+#product1 .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #B8860B;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.22);
+    transition: 0.2s ease;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+#banner {
+    background-color: #fff;
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#banner h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#banner .normal {
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col {
+    flex: 1;
+    padding: 20px;
+}
+
+footer .col h4 {
+    margin-bottom: 20px;
+}
+
+footer .col p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+footer .follow i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+footer .follow h4 {
+    margin-bottom: 10px;
+}
+
+footer .col a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}

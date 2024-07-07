@@ -1,0 +1,392 @@
+html {
+    scroll-behavior: smooth;
+    /* height: 100%; Ensure html and body take full height */
+}
+
+:root {
+    /* //....... Color ........// */
+    --primary-color: #ff3c78;
+    --light-black: rgba(0, 0, 0, 0.89);
+    --black: #000;
+    --white: #fff;
+    --grey: #aaa;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+     font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5; /* Light grey background color */
+    color: #333333; /* Dark grey text color */
+    overflow-x: hidden;
+}
+.top-txt {
+    background-color: var(--black);
+}
+.fas{
+    color:white;
+}
+.head {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.945);
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.head a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.945);
+    margin: 0 10px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5; /* Light grey background color */
+    color: #333333; /* Dark grey text color */
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* Ensure body takes full height */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background: linear-gradient(135deg, #9a4b4b, #120a87); /* Purple gradient background */
+    padding: 1rem;
+    width: 100%; /* Make the navbar full-width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 1s;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    z-index: 100;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link, .nav-item {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    padding: 15px;
+}
+
+.nav-link:hover {
+    color: #d4eef096;
+}
+
+.search-bar {
+    order: -1;
+    margin-right: auto;
+}
+
+.search-bar .btn {
+    background-color: #230a87; /* Matching purple button */
+    border-color: #2f0a87;
+}
+
+.search-bar .btn:hover {
+    background-color: #7250a4; /* Lighter purple on hover */
+    border-color: #a4508b;
+}
+.header {
+    background-color: #0c226b; /* Dark purple header */
+    padding: 1rem;
+    display: flex; /* Set the header to flexbox */
+    flex-direction: row; /* Make the header horizontal */
+    width: 100%; /* Make the header full-width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 1s;
+    position: fixed; /* Set the header to fixed position */
+    top: 0; /* Position the header at the top of the page */
+    z-index: 100;
+    justify-content: space-between; /* Space out the items in the header */
+}
+
+.header-image {
+    width: 100%;
+    height: 60vh;
+    background-image: url('Images/on_lash_eyelash.webp'); /* Placeholder image URL */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header-text {
+    text-align: center;
+    color: #fff;
+    position: absolute; /* Ensure text is positioned on top of the image */
+    z-index: 1; /* Make sure text is above the image */
+}
+
+.header-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+.header-text img {
+    width: 50%;
+    max-width: 300px;
+    border-radius: 50%;
+    border: 2px solid #fff; /* Add border to the image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Box shadow for better emphasis */
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.product h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff3c78;
+}
+
+.product button {
+    background-color: #ff3c78;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #e3336b;
+}
+
+#Cart {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.cart-item h4 {
+    font-size: 1rem;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.cart-item p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+
+.cart-item .price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff3c78;
+    margin-left: 10px;
+}
+
+.cart-item button {
+    background-color: #ff3c78;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart-item button:hover {
+    background-color: #e3336b;
+}
+
+#checkout-btn {
+    background-color: #ff3c78;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#checkout-btn:hover {
+    background-color: #e3336b;
+}
+
+footer {
+    background-color: #2f2f2f;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ff3c78;
+}
+
+#dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#dark-mode-toggle:hover {
+    color: #ff3c78;
+}
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+    background: linear-gradient(135deg, #000000, #434343);
+}
+
+body.dark-mode .navbar .nav-link {
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar .nav-link:hover {
+    color: #ff3c78;
+}
+
+body.dark-mode .header-text h1 {
+    color: #ff3c78;
+}
+
+body.dark-mode .header-text img {
+    border-color: #ff3c78;
+}
+
+body.dark-mode .product {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+}
+
+body.dark-mode .product p {
+    color: #bbb;
+}
+
+body.dark-mode .product .price {
+    color: #ff3c78;
+}
+
+body.dark-mode .cart-item {
+    background-color: #2c2c2c;
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode .cart-item p {
+    color: #bbb;
+}
+
+body.dark-mode .cart-item .price {
+    color: #ff3c78;
+}
+
+body.dark-mode #checkout-btn {
+    background-color: #ff3c78;
+    color: #fff;
+}
+
+body.dark-mode footer {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode footer a {
+    color: #ff3c78;
+}
+footer {
+    padding: 20px 0;
+    background: linear-gradient(135deg, #9a4b4b, #120a87);
+    color: white;
+    text-align: center;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li {
+    display: inline;
+    padding: 0 20px;
+}
+
+.fab {
+    color: white;
+}

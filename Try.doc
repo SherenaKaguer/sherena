@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <title>Awas Beauty Butterfly</title>
+    <link rel="stylesheet" href="Shopping.css">
+</head>
+<body>
+    <!-- ===================HEADER========================= -->
+    <header class="header">
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-list-item">
+                    <a class="navbar-link"><i class="fas fa-solid fa-house"></i>Acceuil</a>
+                    <a class="navbar-link"><i class="fas fa-solid fa-bag-shopping"></i>Nos Produits</a>
+                    <a class="navbar-link"><i class="fas fa-solid fa-address-book"></i>Contactez Nous</a>
+                    <a class="navbar-link"><i class="fas fa-solid fa-cart-shopping"></i>Cart</a>
+                </li>
+            </ul>
+
+            <!-- =====================left-aligned search bar ============= -->
+            <form class="form-inline my-2 my-lg-0 search-bar">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+            </form>
+        </nav>
+    </header>
+
+    <!-- ===================MAIN CONTENT========================= -->
+    <main class="main-content">
+        <!-- ==========HOME============== -->
+
+      <div id="Home">
+        <h1 class="welcome">Welcome To Awa's Beauty Butterfly</h1>
+      </div>
+    </div>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+
+    </main>
+
+    <!-- ===================FOOTER========================= -->
+    <footer class="bg-dark text-white text-center p-3">
+        <div class="container">
+            <p>&copy; Awas Beauty Butterfly. All rights reserved.</p>
+            <ul class="list-unstyled">
+                <li class="d-inline p-2"><a href="#" class="text-white"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li class="d-inline p-2"><a href="#" class="text-white"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li class="d-inline p-2"><a href="#" class="text-white"><i class="fab fa-instagram"></i> Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="Shopping.js"></script>
+</body>
+</html>
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5; /* Light grey background color */
+    color: #333333; /* Dark grey text color */
+    overflow-x: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #0c226b; /* Dark purple header */
+    padding: 1rem;
+    display: flex; /* Set the header to flexbox */
+    flex-direction: row; /* Make the header horizontal */
+    width: 100%; /* Make the header full-width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 1s;
+    position: fixed; /* Set the header to fixed position */
+    top: 0; /* Position the header at the top of the page */
+    z-index: 100;
+    justify-content: space-between; /* Space out the items in the header */
+}
+
+.main-content {
+    flex: 1;
+    padding-top: 70px; /* Add padding to account for the fixed header */
+}
+
+.navbar-list, .navbar-list-item {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Set the navbar-nav to flexbox */
+    flex-direction: row; /* Make the navbar-nav horizontal */
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    position: relative;
+    padding: 15px;
+}
+
+.navbar-link:hover {
+    color: #d4eef096; 
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fas {
+    color: #0c226b;
+}
+.search-bar {
+    order: -1; /* Move the search bar to the left */
+    margin-right: auto;
+}
+/* ====================THEME===================== */
+/* Light Mode Styles */
+body.light {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Dark Mode Styles */
+  body.dark {
+    background-color: black;
+    color: white;
+  }
+footer {
+    padding: 20px 0;
+    background-color: #0c226b; /* Dark purple footer */
+    color: #ffffff; /* White text color */
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li {
+    display: inline;
+    padding: 0 20px;
+}
+
+.fab{
+    color:white;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <title>Awas Beauty Butterfly</title>
+    <link rel="stylesheet" href="Shopping.css">
+</head>
+<body>
+    <!-- ===================HEADER========================= -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <form class="form-inline my-2 my-lg-0 search-bar">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+            </form>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-house"></i> Acceuil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-bag-shopping"></i> Nos Produits</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-address-book"></i> Contactez Nous</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-cart-shopping"></i> Cart</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-image">
+            <div class="header-text">
+                <h1>Welcome To Awa's Beauty Butterfly</h1>
+                <img class="Header-Img" src="Images/pexels-photo-2866796.jpeg" alt="Header-Image">
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================MAIN CONTENT========================= -->
+    <main class="main-content">
+        <!-- Add your main content here -->
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </main>
+
+    <!-- ===================FOOTER========================= -->
+    <footer class="bg-dark text-white text-center p-3">
+        <div class="container">
+            <p>&copy; Awas Beauty Butterfly. All rights reserved.</p>
+            <ul class="list-unstyled">
+                <li class="d-inline p-2"><a href="#" class="text-white"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li class="d-inline p-2"><a href="#" class="text-white"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li class="d-inline p-2"><a href="#" class="text-white"><i class="fab fa-instagram"></i> Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="Shopping.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    
+    <title>Awa's Beauty Butterfly</title>
+    <link rel="stylesheet" href="Shopping.css">
+</head>
+<body>
+    <nav class="navbar">
+        <form class="form-inline my-2 my-lg-0 search-bar">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+        </form>
+        <ul class="navbar-list">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-house"></i> Acceuil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-bag-shopping"></i> Nos Produits</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-address-book"></i> Contactez Nous</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="cart-link"><i class="fas fa-cart-shopping"></i> Cart</a>
+            </li>
+            <li class="nav-item">
+                <button id="dark-mode-toggle" class="btn btn-link nav-link"><i class="fas fa-moon"></i></button>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <div class="header-image">
+            <div class="header-text">
+                <h1>Welcome To Awa's Beauty Butterfly</h1>
+                <!-- <img class="Header-Img" src="Images/pexels-photo-2866796.jpeg" alt="Header-Image"> -->
+            </div>
+        </div>
+    </header>
+    
+    <!-- ===================MAIN CONTENT========================= -->
+    <main class="main-content">
+        <!-- Add your main content here -->
+    </main>
+
+    <!-- ===================FOOTER========================= -->
+    <footer class="bg-dark text-white text-center p-3">
+        <div class="container">
+            <p>&copy; Awas Beauty Butterfly. All rights reserved.</p>
+            <ul class="list-unstyled">
+                <li class="d-inline p-2"><a href="#" class="text-white"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li class="d-inline p-2"><a href="#" class="text-white"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li class="d-inline p-2"><a href="#" class="text-white"><i class="fab fa-instagram"></i> Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="Shopping.js"></script>
+</body>
+</html>
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+     font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5; /* Light grey background color */
+    color: #333333; /* Dark grey text color */
+    overflow-x: hidden;
+}
+.navbar {
+    background: linear-gradient(135deg, #9a4b4b, #120a87); /* Purple gradient background */
+    padding: 1rem;
+    display: flex; /* Set the navbar to flexbox */
+    flex-direction: row; /* Make the navbar horizontal */
+    width: 100%; /* Make the navbar full-width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 1s;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    z-index: 100;
+    justify-content: space-between; /* Space out the items in the navbar */
+}
+.navbar-list{
+    list-style:none;
+    display:flex;
+    flex-direction:row;
+    margin:0;
+    padding:0;
+}
+
+
+
+.nav-link,.nav-item {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    padding: 15px;
+}
+
+.nav-link:hover {
+    color: #d4eef096;
+}
+
+.search-bar {
+    order: -1;
+    margin-right: auto;
+}
+
+.header-text {
+
+    text-align: center;
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-text h1 {
+    font-size: 3rem;
+}
+
+.header-image{
+    background-image: url("Images/pexels-photo-2866796.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.main-content {
+    margin-bottom: 100px; /* adjust this value as needed */
+}
+footer {
+    padding: 20px 0 ;
+    background: linear-gradient(135deg, #9a4b4b, #120a87);
+    color: white;
+    text-align: center;
+    margin-bottom: auto;
+    
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li {
+    display: inline;
+    padding: 0 20px;
+}
+
+.fab {
+    color: white;
+}
+/* ====================THEME===================== */
+/* Light Mode Styles */
+body.light {
+    background-color: white;
+    color: black;
+}
+  
+/* Dark Mode Styles */
+body.dark {
+    background-color: black;
+    color: white;
+}
+
+/* ====================RESPONSIVENESS===================== */
+@media (max-width: 768px) {
+    .navbar-list {
+        flex-direction: column; /* Stack navbar links vertically */
+        text-align: center;
+    }
+
+    .navbar-link {
+        padding: 10px 0;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar {
+        order: -1;
+        margin: 10px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
